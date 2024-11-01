@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(29,41,81);
+}
+
+.header .logo {
+  font-size: 40px;
+  font-family: 'Poppins';
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(29,41,81);
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  padding: 30px;
+  font-size: 20px;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+}
+
+ .content-box{
+    border: 3px solid #f1f1f1;
+    margin: 2.5%;
+    position: absolute;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    align-self: center;
+    width: 90%;
+}
+
+h1{
+    text-transform: uppercase;
+    text-decoration: underline;
+    align: center;
+    color: rgb(18, 18, 75);
+    margin: 15px;
+    font-size: 40px;
+}
+
+h4{
+  color: rgb(18, 18, 75);
+  align: left;
+}
+
+.heading{
+    height: 400px;
+}
+
+.heading img{
+    width: 50%;
+    float: left;
+    margin: 10px;
+    height: 275px;
+}
+
+.info{
+    width: 45%;
+    height: 275px;
+    float: right;
+    margin: 10px;
+    background-color: white;
+}
+
+.info p{
+ font-size: 20px;
+ margin: 25px;
+ margin-top: 80px;
+ font-family: "Poppins";
+}
+
+.topics{
+    margin: 25px;
+    border-top: 2px solid #eeeeee;
+    padding-top: 25px;
+}
+
+
+  /* Three image containers (use 25% for four, and 50% for two, etc) */
+  .topic-box{
+    float: left;
+    width: 29%;
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px;
+  }
+
+.topic-box a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(18, 18, 75);
+}

@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Poppins';
+    background-color: rgb(245, 243, 243);
+  }
+  
+  nav{
+    background: rgb(172, 12, 12);
+    height: 80px;
+    width: 100%;
+  }
+  label.logo{
+    font-family: 'Poppins';
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: 500;
+  }
+  label.logo:hover{
+    color: #5eb9ff;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    font-family: 'Poppins';
+    font-size: 17px;
+    font-weight: 500;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: white;
+  }
+  a.active,a:hover{
+    color: white;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none ;
+  }
+  @media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 60%;
+      height: 100vh;
+      background: #000000c9;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    
+  #check:checked ~ ul{
+    left: 0;
+  }
+  }
+
+  .box{
+    border: 3px solid #f1f1f1;
+    margin: 10%;
+    margin-top: 5%;
+    width: 80%;
+    position: absolute;
+    background: white;
+    padding: 50px 60px 70px;
+    text-align: center; 
+    border-radius: 20px;
+}
+
+.imgcontainer img{
+  height: 500px;
+  width: 800px;
+}
+
+.box2{
+  border: 1px solid rgb(182, 143, 244);
+  margin: 1%;
+  height:fit-content;
+  position: relative;
+  background: white;
+  padding: 50px 60px 70px;
+  text-align: center; 
+  border-radius: 20px;
+  display: flex;
+  font-size: 5mm;
+  text-transform: uppercase;
+}

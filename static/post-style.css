@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(29,41,81);
+}
+
+.header .logo {
+  font-size: 40px;
+  font-family: 'Poppins';
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(29,41,81);
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  padding: 30px;
+  font-size: 20px;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+}
+
+ .content-box{
+    border: 3px solid #f1f1f1;
+    margin: 2.5%;
+    position: absolute;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    align-self: center;
+    width: 90%
+}
+
+.content-box h1{
+    text-transform: uppercase;
+    align: center;
+    color: rgb(18, 18, 75);
+    border: 1px solid black;
+    margin: 5px;
+    font-size: 50px;
+}
+
+.top{
+    display: flex;
+    margin: 25px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.top img{
+    width: 40%;
+    height: 250px;
+    float: left;
+    margin: 50px;
+}
+
+.post-form{
+    width: 45%;
+    border: 1px solid black;
+    float: right;
+    margin: 25px;
+}
+
+.post-form h2{
+    text-transform: uppercase;
+    align: center;
+    color: rgb(18, 18, 75);
+    margin: 10px;
+}
+
+.post-form label{
+    margin: 5px;
+}
+
+textarea{
+    align: center;
+    margin: 15px;
+    width: 90%;
+    height: 50%;
+}
+
+
+.questions{
+    margin: 25px;
+    text-align: left;
+    padding: 25px;
+    background-color: #f4f4f4;
+    border-radius: 2px;
+}
+
+.responses{
+    border: 1px solid grey;
+    margin-top: 5%;
+    text-align: left;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.answer h3{
+    color: grey;
+}
+
+.responses h4{
+    color: grey;
+}
+
+.responses a{
+    text-decoration: underline;
+    font-size: 25px;
+    color: rgb(70,130,180);
+}
+
+form button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 1%;
+    border: none;
+    cursor: pointer;
+    align: center;
+    width: 50%;
+}
+
+.answer h3{
+    color: grey;
+}
+
+.responses h4{
+    color: grey;
+}
+
+.responses a{
+    text-decoration: underline;
+    font-size: 25px;
+    color: rgb(70,130,180);
+}
+
+.response-form{
+    border: 1.5px solid grey;
+    margin: 5%;
+}
+
+form input{
+    margin: 10px;
+}
+
+form textarea{
+    align: center;
+    width: 70%;
+}
+
+
+form button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 1%;
+    border: none;
+    cursor: pointer;
+    align: center;
+    width: 50%;
+}
+
+.response-content{
+    border: 3px solid #f1f1f1;
+    margin: 2.5%;
+    position: absolute;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    align-self: center;
+    width: 90%
+}
+
+.question{
+    border-bottom : 2px solid black;
+    margin: 1%;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.question h1{
+    text-transform: uppercase;
+    align: center;
+    color: rgb(18, 18, 75);
+    margin: 5px;
+    font-size: 50px;
+}
+
+.question h4{
+    color: grey;
+}
+
+.question h2{
+    text-transform: uppercase;
+    align: center;
+    color: rgb(18, 18, 75);
+    margin: 5px;
+    font-size: 30px;
+}
+
+
+.response-answer h3{
+    color: black;
+}
+
+.response-answer h5{
+    color: grey;
+}
+
+
+.response-form h2{
+    text-transform: uppercase;
+    color: rgb(18, 18, 75);
+    align: left;
+}
+
+p{
+    color: white;
+}
