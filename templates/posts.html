@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/post-style.css') }}">
+</head>
+<body>
+    <header class="header">
+      <a href="#" class="logo">Mconnect</a>
+      <nav class="nav-items">
+        <a href="/user/{{user.user_email}}/topics">Topics</a>
+        <a href="/">Log Out</a>
+      </nav>
+    </header>
+
+
+    <div class="content-box">
+
+        <h1>Topic:  {{topic.topic_name}}</h1>
+
+
+
+        <div class="top">
+            <img src="{{ url_for('static', path='/images/post-image.jpg') }}">
+            <form action="/post/" class="post-form" method="post">
+                <div class="heading">
+                    <h2>Ask a Question:</h2>
+                </div>
+                <!--<div class="section">
+                <label><b>Topic:</b></label> <br>
+                <input type="radio" id="General" name="topic_name" value="General">
+                <label>General</label>
+                <input type="radio" id="Coding" name="topic_name" value="Coding">
+                <label>Coding</label>
+                <input type="radio" id="References" name="topic_name" value="References">
+                <label>References</label>
+              </div>-->
+
+                <input type="hidden" id="user_id" name="user_id" value="">
+                <input type="hidden" id="topic_id" name="topic_name" value="{{topic.topic_name}}">
+
+                <textarea placeholder="Enter Your Question" id="post" name="post_content" rows="5" cols="50" required></textarea>
+
+                <button type="submit" class="btn">Post</button>
+            </form>
+        </div>
+
+        <div class="questions">
+            {% for post in user_posts %}
+                <div class="responses">
+                    <div class="answer">
+                        <h4>{{post.user_name}}  ({{post.user_type}}): </h4>
+                        <h2>Q. {{post.post_content}}</h2>
+                        <a href="/responses/{{user_id}}/{{post.topic_id}}/{{post.post_id}}">Answers</a>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+
+
+
+
+        <p id="posts"></p>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="{{ url_for('static', path='/js/script.js') }}"></script>
+    <script>
+         var myurl = document.getElementById("posts").innerHTML = "The Full URL of this page is: <br>" + window.location.href;
+         var splitUrl = myurl.split('/');
+         var user_id = splitUrl[(splitUrl.length)-2];
+         var topic_id = splitUrl[splitUrl.length];
+         var post_id = post.post_id;
+         document.getElementById("user_id").value = user_id
+         document.getElementById("ruser_id").value = user_id
+         document.getElementById("topic_id").value = topic_id
+    </script>
+</body>
+</html>

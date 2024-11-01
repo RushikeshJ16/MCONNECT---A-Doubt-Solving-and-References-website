@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responses</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/post-style.css') }}">
+</head>
+<body>
+    <header class="header">
+      <a href="#" class="logo">Mconnect</a>
+      <nav class="nav-items">
+        <!-- A button to open the popup form -->
+        <a href="/posts/{{user.user_id}}/{{topic_id}}">Go Back</a>
+        <a href="/user/{{user.user_email}}/topics">Topics</a>
+        <a href="/">Log Out</a>
+      </nav>
+    </header>
+
+    <div class="response-content">
+        <div class="question">
+            <h4>{{user_post.user_name}}  ({{user_post.user_type}}): </h4>
+           <h2>Q. {{user_post.post_content}}</h2>
+        </div>
+
+        {% for response in user_responses %}
+        <div class="responses">
+            <div class="response-answer">
+                <h4>{{response.user_name}}  ({{response.user_type}}): </h4>
+                <h2>A. {{response.response_content}}</h2>
+            </div>
+        </div>
+        {% endfor %}
+
+
+        <div class="response-form">
+            <h2>ANSWER THIS QUESTION:</h2>
+            <form action="/response" class="form-container" method="post">
+                <textarea placeholder="Enter Your Answer" id="response" name="response_content" rows="5" cols="50" required></textarea>
+                <input type="hidden" id = "user_id" name="user_id" value="{{user_id}}">
+                <input type="hidden" id = "post_id" name="post_id" value="{{user_post.post_id}}">
+                <input type="hidden" id = "topic_id" name="topic_id" value="{{user_post.topic_id}}">
+
+                <button type="submit" class="btn">Post</button>
+            </form>
+        </div>
+
+    </div>
+    <p id="posts"></p>
+
+        <!--<h1>{{user_post.post_content}}</h1>
+        {% for response in user_responses %}
+            <h4>{{response.response_content}}</h4>
+        {% endfor %} -->
+
+    <!--<script>
+         var myurl = document.getElementById("posts").innerHTML = "The Full URL of this page is: <br>" + window.location.href;
+         var splitUrl = myurl.split('/');
+         var user_id = splitUrl[(splitUrl.length)-3];
+         var post_id = post.post_id;
+         document.getElementById("user_id").value = user_id
+         document.getElementById("ruser_id").value = user_id
+    </script>-->
+
+
+</body>
+</html>
